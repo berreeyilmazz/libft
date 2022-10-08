@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: havyilma <havyilma@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: havyilma <havyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 13:54:20 by havyilma          #+#    #+#             */
-/*   Updated: 2022/10/08 15:11:39 by havyilma         ###   ########.fr       */
+/*   Created: 2022/10/08 17:53:57 by havyilma          #+#    #+#             */
+/*   Updated: 2022/10/08 17:55:14 by havyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	ft_tolower(int c)
 {
-	char		*p;
-	const char	*s;
-	int			i;
-
-	p = (char *)dst;
-	s = (const char *)src;
-	i = 0;
-	while (i < n)
-	{
-		p[i] = s[i];
-		i++;
-	}
-	return (dst);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }
