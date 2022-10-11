@@ -6,7 +6,7 @@
 /*   By: havyilma <havyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 18:06:34 by havyilma          #+#    #+#             */
-/*   Updated: 2022/10/09 21:03:55 by havyilma         ###   ########.fr       */
+/*   Updated: 2022/10/11 01:49:31 by havyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ char	*ft_strdup(const char *s1)
 	i = 0;
 	length = ft_strlen(s1);
 	temp = malloc(sizeof(char) * (length + 1));
-	if (temp == 0)
-		return (0);
+	if (!temp)
+		return (NULL);
 	while (s1 && s1[i])
 	{
 		temp[i] = s1[i];

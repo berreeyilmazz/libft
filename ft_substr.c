@@ -6,7 +6,7 @@
 /*   By: havyilma <havyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 18:25:25 by havyilma          #+#    #+#             */
-/*   Updated: 2022/10/09 19:01:43 by havyilma         ###   ########.fr       */
+/*   Updated: 2022/10/11 01:44:04 by havyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,17 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*a;
 	int		i;
-	char	*str;
 
 	i = 0;
-	a = malloc(sizeof(int) * (len + 1));
-	if (a == 0)
-		return (0);
+	if (!s)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	a = malloc(sizeof(char) * (len + 1));
+	if (!a)
+		return (NULL);
 	while (s[start] && len != 0)
 	{
 		a[i] = s[start];

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: havyilma <havyilma@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: havyilma <havyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 13:54:20 by havyilma          #+#    #+#             */
-/*   Updated: 2022/10/08 15:11:39 by havyilma         ###   ########.fr       */
+/*   Updated: 2022/10/11 00:48:05 by havyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char		*p;
 	const char	*s;
-	int			i;
+	size_t		i;
 
+	if (!dst && !src)
+		return (0);
 	p = (char *)dst;
 	s = (const char *)src;
 	i = 0;
@@ -27,5 +29,5 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		p[i] = s[i];
 		i++;
 	}
-	return (dst);
+	return (p);
 }

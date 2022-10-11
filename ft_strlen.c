@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: havyilma <havyilma@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: havyilma <havyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 21:26:12 by havyilma          #+#    #+#             */
-/*   Updated: 2022/10/08 15:07:40 by havyilma         ###   ########.fr       */
+/*   Updated: 2022/10/10 20:14:40 by havyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *m)
+size_t	ft_strlen(const char *m)
 {
 	int	i;
 
