@@ -6,7 +6,7 @@
 /*   By: havyilma <havyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 20:42:53 by havyilma          #+#    #+#             */
-/*   Updated: 2022/10/10 22:22:40 by havyilma         ###   ########.fr       */
+/*   Updated: 2022/10/13 20:50:19 by havyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,8 @@ char	*ft_strtrim(char const *s, char const *set);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *m);
 void	*ft_calloc(size_t count, size_t size);
-
+char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
 
 
 #endif

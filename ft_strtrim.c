@@ -6,7 +6,7 @@
 /*   By: havyilma <havyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 19:12:46 by havyilma          #+#    #+#             */
-/*   Updated: 2022/10/11 01:47:26 by havyilma         ###   ########.fr       */
+/*   Updated: 2022/10/13 19:25:27 by havyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ static int check_in(const char *str, char c)
 	return 0;
 }
 
-//_21__hello___
-//_2
 char	*ft_strtrim(char const *new, char const *set)
 {
 	int		idx;
@@ -62,5 +60,7 @@ char	*ft_strtrim(char const *new, char const *set)
 	}
 	s1[len  + 1] = 0;
 	res = ft_strdup(s1 + idx);
+	if (!res)
+		return (0);
 	return (res);
 }
