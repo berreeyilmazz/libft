@@ -6,13 +6,13 @@
 /*   By: havyilma <havyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 13:43:11 by havyilma          #+#    #+#             */
-/*   Updated: 2022/10/09 21:14:14 by havyilma         ###   ########.fr       */
+/*   Updated: 2022/10/15 18:20:28 by havyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	return(ft_memset(s, 0, n));
+	ft_memset(s, 0, n);
 }

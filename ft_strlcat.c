@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: havyilma <havyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 15:34:13 by havyilma          #+#    #+#             */
-/*   Updated: 2022/10/15 13:39:33 by havyilma         ###   ########.fr       */
+/*   Created: 2022/10/15 12:08:52 by havyilma          #+#    #+#             */
+/*   Updated: 2022/10/15 13:12:57 by havyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <stdlib.h>
-
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
+	size_t	s;
+	size_t	d;
 
-	i = 0;
-	while (i < n && (s1[i] || s2[i]))
+	d = 0;
+	s = 0;
+
+	if (dstsize == 0 || !src)
+		return (ft_strlen(src));
+	while (dst[d] && (d < dstsize))
+		d++;
+	while (src[s] && d + s + 1 < dstsize)
 	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
+		dst[s + d] = src[s];
+		s++;
 	}
-	return (0);
+	if (d < dstsize)
+		dst[d + s] = '\0';
+	return (d + ft_strlen(src));
 }

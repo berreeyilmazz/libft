@@ -6,14 +6,11 @@
 /*   By: havyilma <havyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 19:26:22 by havyilma          #+#    #+#             */
-/*   Updated: 2022/10/13 22:44:14 by havyilma         ###   ########.fr       */
+/*   Updated: 2022/10/15 18:06:24 by havyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
-
 
 long	ft_check(long n)
 {
@@ -64,9 +61,4 @@ char	*ft_itoa(int n)
 			str[0] = '-';
 	}
 	return (str);
-}
-
-int main()
-{
-	printf("%s\n", ft_itoa(-2147483648));
 }

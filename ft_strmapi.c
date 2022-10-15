@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: havyilma <havyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 15:34:13 by havyilma          #+#    #+#             */
-/*   Updated: 2022/10/15 13:39:33 by havyilma         ###   ########.fr       */
+/*   Created: 2022/10/15 13:14:06 by havyilma          #+#    #+#             */
+/*   Updated: 2022/10/15 15:27:31 by havyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <stdlib.h>
-
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t i;
+	unsigned int	i;
+	int				len;
+	char			*str;
 
+	if (!s)
+		return (0);
+	len = ft_strlen(s) + 1;
+	str = malloc(sizeof(char) * len);
+	if (!str)
+		return(0);
 	i = 0;
-	while (i < n && (s1[i] || s2[i]))
+	while(s[i])
 	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		str[i] = f(i, s[i]);
 		i++;
 	}
-	return (0);
+	str[i] = 0;
+	return(str);
 }
