@@ -14,19 +14,19 @@
 
 int	ft_row(const char *s, char c)
 {
-	int	i;
+	int	count;
 
-	i = 0;
+	count = 0;
 	while (*s)
 	{
 		while (*s == c)
 			s++;
 		if (*s)
-			i++;
+			count++;
 		while (*s != c && *s)
 			s++;
 	}
-	return (i);
+	return (count);
 }
 
 int	ft_col(const char *s, char c)
@@ -56,7 +56,7 @@ char	**ft_split(char const *s, char c)
 	while (i < a)
 	{
 		k = 0;
-		tab[i] = (char*)malloc(sizeof(char) * ft_col(s, c) + 1);
+		tab[i] = malloc(sizeof(char) * ft_col(s, c) + 1);
 		while (*s == c)
 			s++;
 		while (*s != c && *s)

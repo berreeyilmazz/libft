@@ -31,3 +31,14 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
+
+int main()
+{
+	char *hayst = "berre";
+	char *need = "r";
+	char *new;
+	new = ft_strnstr(hayst, need, 4);
+	printf("%s", new);
+}
+
+needle ve haystackte ortak gördüğü yerden itibaren yazdırıyor

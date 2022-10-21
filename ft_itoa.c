@@ -40,13 +40,13 @@ char	*ft_itoa(int n)
 	long	positive;
 	int		i;
 	long	size;
-	long	berre;
+	long	real;
 
-	berre = n;
-	positive = ft_check(berre);
-	if (berre < 0)
+	real = n;
+	positive = ft_check(real);
+	if (real < 0)
 		size = ft_intlen(positive) + 2;
-	else if (berre >= 0)
+	else if (real >= 0)
 		size = ft_intlen(positive) + 1;
 	str = malloc(sizeof(char) * size);
 	if (!str)
@@ -57,7 +57,7 @@ char	*ft_itoa(int n)
 	{
 		str[size] = (positive % 10) + 48;
 		positive = positive / 10;
-		if (size == 0 && berre < 0)
+		if (size == 0 && real < 0)
 			str[0] = '-';
 	}
 	return (str);

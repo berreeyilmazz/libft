@@ -22,3 +22,27 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
+
+void	f(void *a)
+{
+	int i = 0;
+	char *s = (char *)a;
+	while(s[i] != '\0')
+	{
+		if (s[i] >= 97 && s[i] <= 122)
+			s[i] = s[i] - 32;
+		i++;
+	}
+}
+
+int main()
+{
+	t_list *lst;
+	char	*str;
+	str = malloc(sizeof(char)*2);
+	str = ft_strdup("be0re"); 
+	lst = ft_lstnew(str);
+	ft_lstiter(lst, &f);
+	printf("%s", lst->content);
+	return(0);
+}

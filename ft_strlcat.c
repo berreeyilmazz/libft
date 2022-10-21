@@ -20,7 +20,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	d = 0;
 	s = 0;
 	if (dstsize == 0 || !src)
-		return (ft_strlen(src));
+		return (0);
 	while (dst[d] && (d < dstsize))
 		d++;
 	while (src[s] && d + s + 1 < dstsize)
@@ -32,3 +32,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[d + s] = '\0';
 	return (d + ft_strlen(src));
 }
+
+int main()
+{
+	char *dest = "yes be";
+	char *src = "";
+	size_t a;
+	a = ft_strlcat(dest, src, 0);
+	printf("%zu", a);
+}
+
+ikisini ard arda yazzdırıp toplamını return ediyor.
