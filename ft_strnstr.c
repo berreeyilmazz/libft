@@ -6,7 +6,7 @@
 /*   By: havyilma <havyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 15:37:03 by havyilma          #+#    #+#             */
-/*   Updated: 2022/10/11 01:28:20 by havyilma         ###   ########.fr       */
+/*   Updated: 2022/10/22 15:55:33 by havyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	if (!*needle)
@@ -31,14 +31,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
-int main()
-{
-	char *hayst = "berre";
-	char *need = "r";
-	char *new;
-	new = ft_strnstr(hayst, need, 4);
-	printf("%s", new);
-}
-
-needle ve haystackte ortak gördüğü yerden itibaren yazdırıyor

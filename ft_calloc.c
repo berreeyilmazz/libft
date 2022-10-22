@@ -6,7 +6,7 @@
 /*   By: havyilma <havyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 17:49:08 by havyilma          #+#    #+#             */
-/*   Updated: 2022/10/15 18:28:34 by havyilma         ###   ########.fr       */
+/*   Updated: 2022/10/22 15:51:19 by havyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*str;
 
+	if (count == UINTPTR_MAX || size == UINTPTR_MAX)
+		return (0);
 	str = malloc(count * size);
 	if (!str)
 		return (NULL);

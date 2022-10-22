@@ -6,7 +6,7 @@
 /*   By: havyilma <havyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 19:26:22 by havyilma          #+#    #+#             */
-/*   Updated: 2022/10/21 16:29:46 by havyilma         ###   ########.fr       */
+/*   Updated: 2022/10/22 15:54:58 by havyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ char	*ft_itoa(int n)
 {
 	char	*str;
 	long	positive;
-	int		i;
 	long	size;
 	long	real;
 
@@ -46,7 +45,7 @@ char	*ft_itoa(int n)
 	positive = ft_check(real);
 	if (real < 0)
 		size = ft_intlen(positive) + 2;
-	else if (real >= 0)
+	else
 		size = ft_intlen(positive) + 1;
 	str = malloc(sizeof(char) * size);
 	if (!str)

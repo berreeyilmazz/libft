@@ -6,7 +6,7 @@
 /*   By: havyilma <havyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 18:56:49 by havyilma          #+#    #+#             */
-/*   Updated: 2022/10/21 16:22:49 by havyilma         ###   ########.fr       */
+/*   Updated: 2022/10/22 16:05:47 by havyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (thegoodplace == 0)
 		return (0);
 	i = 0;
+	k = 0;
 	while (s1[k])
-	{
-		thegoodplace[i] = s1[k];
-		i++;
-		k++;
-	}
+		thegoodplace[i++] = s1[k++];
 	k = 0;
 	while (s2[k])
-	{
-		thegoodplace[i] = s2[k];
-		i++;
-		k++;
-	}
+		thegoodplace[i++] = s2[k++];
 	thegoodplace[i] = 0;
 	return (thegoodplace);
 }
